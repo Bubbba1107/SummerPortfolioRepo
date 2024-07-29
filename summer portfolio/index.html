@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Larry's Professional Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>    
+    <div id="header">
+       <div class="container">
+            <nav>
+                <img src="images/pic1.jpg" class="logo" alt="THGP Logo">
+                <ul>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-text">
+                <p>Business Desginer</p>
+                <h1>Hello, my name is <span>Larry C. Caldwell III</span><br> from Richmond, California. </h1>
+            </div>
+       </div> 
+    </div>
+    <!-- -----------about ---------- -->
+    <div id="about">
+       <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/pic3.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>I am a 16 year old African-American male who is able to use the skills that I've learned, and people I know in order to follow the path God has set for me! </p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Business Analyst</span><br>Business Intelligence</li>
+                            <li><span>Marketing</span><br>Business Promotion</li>
+                            <li><span>Sales Management</span><br>Product Distribution(Sales)</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2023 - Life Guard</span><br>CPR/AED Certification</li>
+                            <li><span>2024 - Hidden Genius Programee</span><br>Fundamental Core Computer Science Principles</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2021 - Jr High School Completion</span><br>Grades 5-8</li>
+                            <li><span>2024 - Current High School (11th Grade Year)</span><br> Grades 9-11</li>
+                        </ul>
+                    </div>
+                </div>
+                
+            </div>
+       </div>
+
+    </div>
+   <!--services-->
+   <div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services
+            <div class="services-list">
+                <div>
+                    <h2>Business Analyst</h2>
+                    <p>I can identify areas where an organization can increase its efficiency and strengthen business processes.</p>
+                    <a href="#">learn more</a>
+                </div>
+                <div>
+                    <h2>Marketing</h2>
+                    <p>I effectively promote the buying or selling of its products or services.</p>
+                    <a href="#">learn more</a>
+                </div>
+                <div>
+                    <h2>Sales Management</h2>
+                    <p>I direct the distribution of goods and services by assigning sales territories, setting sales goals, and establishing training programs for the organization's sales representatives.</p>
+                    <a href="#">learn more</a>
+                </div>
+            </div>
+        </h1>
+
+    </div>
+   </div>
+   <!--portfolio-->
+   <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+
+                <div class="work">
+                    <img src="images/work1.jpeg">
+                    <div class="layer">
+                        <h3>Business Analyst Duties</h3>
+                        <p>This lists the main roles that I have as a Business Analyst.</p>
+                        <a href="#"></a>
+                    </div>
+                </div>
+
+                <div class="work">
+                    <img src="images/work2.png">
+                    <div class="layer">
+                        <h3>Marketing</h3>
+                        <p>This lists the priorities of a Marketer.</p>
+                        <a href="#"></a>
+                    </div>
+                </div>
+
+                <div class="work">
+                    <img src="images/work3.jpeg">
+                    <div class="layer">
+                        <h3>Sales Management</h3>
+                        <p>This structures the the way that I would opporate while in Sales Management.</p>
+                        <a href="#"></a>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn">See More</a>
+        </div>
+   </div>
+
+<!--contact-->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p>EMAIL: caldwell3.larry@gmail.com</p>
+                <p>MOBILE: 510-660-2611</p>
+                <p>SOCIALS: @spacejambub</p>
+                
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="Text" name="Name" placeholder="Your Name" required>
+                    <input type="Email" name="Name" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright © Larry. Made by Larry.</p>
+    </div>
+</div>
+
+<script>
+
+var tablinks = document.getElementsByClassName("tab-links");
+var tabcontents = document.getElementsByClassName("tab-contents");
+function opentab(tabname){
+    for(tablink of tablinks){
+        tablink.classList.remove("active-link");
+    }
+    for(tabcontent of tabcontents){
+        tabcontent.classList.remove("active-tab");
+    }
+    event.currentTarget.classList.add("active-link");
+    document.getElementById(tabname).classList.add("active-tab");
+}
+
+</script>
+
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbyVFT5ad2D-5F9FxUmgju9fojaK0ggw-dYsmj94Cs82fd2DlcI5AkHG6DAdHsrLAigD/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message sent successfully"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+
+</body>
+</html> 
